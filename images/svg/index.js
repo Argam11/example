@@ -7,7 +7,7 @@ fs.readdir(__dirname, (err, files) => {
   }
 
   files.forEach((file) => {
-    if (file === "index.js") return;
+    if (file === "index.js" || file.match(/^\d/)) return;
 
     fs.readFile(__dirname + "/" + file, "utf-8", function (err, result) {
       if (err) {
