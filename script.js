@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 // });
 
 function handleOrientation(event) {
-  alert(11);
   // Access orientation data
   const alpha = Math.round(event.alpha); // Z-axis rotation [0, 360)
   // const beta = event.beta; // X-axis rotation [-180, 180)
