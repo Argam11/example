@@ -5,6 +5,7 @@ const air = document.querySelector(".air");
 const beer = document.querySelector(".beer");
 
 const input = document.getElementById("input");
+const span = document.getElementById("span");
 
 input.onchange = (e) => {
   const v = e.target.value;
@@ -56,6 +57,8 @@ function handleOrientation(event) {
   const alpha = Math.round(event.alpha); // Z-axis rotation [0, 360)
   // const beta = event.beta; // X-axis rotation [-180, 180)
   // const gamma = event.gamma; // Y-axis rotation [-90, 90)
+
+  span.innerText = alpha;
 
   // p1.innerHTML = `x: ${alpha}`;
   // p2.innerHTML = `y: ${beta}`;
