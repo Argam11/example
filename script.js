@@ -58,9 +58,24 @@ function handleOrientation(event) {
   // p2.innerHTML = `y: ${beta}`;
   // p3.innerHTML = `z: ${gamma}`;
 
-  air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
-  beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
+  throttle(() => {
+    air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
+    beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
+  }, 1000);
 
   // console.log(`Orientation - Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
   // Use these values as needed
+}
+
+function throttle(mainFunction, delay = 500) {
+  let timerFlag = null;
+
+  return (...args) => {
+    if (timerFlag === null) {
+      mainFunction(...args);
+      timerFlag = setTimeout(() => {
+        timerFlag = null;
+      }, delay);
+    }
+  };
 }
