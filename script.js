@@ -1,6 +1,7 @@
 const p1 = document.querySelector("#p1");
 const p2 = document.querySelector("#p2");
 const p3 = document.querySelector("#p3");
+const p4 = document.querySelector("#p4");
 
 const button = document.createElement('button');
 button.innerHTML = 'Allow motion sensors';
@@ -51,10 +52,12 @@ function handleOrientation(event) {
   const alpha = event.alpha; // Z-axis rotation [0, 360)
   const beta = event.beta;   // X-axis rotation [-180, 180)
   const gamma = event.gamma; // Y-axis rotation [-90, 90)
+  const absolute = event.absolute;
 
   p1.innerHTML = `x: ${alpha}`;
   p2.innerHTML = `y: ${beta}`;
   p3.innerHTML = `z: ${gamma}`;
+  p4.innerHTML = `a: ${absolute}`;
 
   console.log(`Orientation - Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
   // Use these values as needed
