@@ -32,18 +32,18 @@ function handleOrientation(event) {
     if (printTimeout == undefined) {
       var outEl = document.getElementById("rotationOutput");
       var element = document.createElement("div");
-      element.innerHTML = ""
-        + "\tSpin = " + Math.floor(spin)
-        + "\tAlpha = " + Math.floor(alpha)
-        + "\tBeta = " + Math.floor(beta)
-        + "\tGamma = " + Math.floor(gamma);
+    //   element.innerHTML = ""
+    //     + "\tSpin = " + Math.floor(spin)
+    //     + "\tAlpha = " + Math.floor(alpha)
+    //     + "\tBeta = " + Math.floor(beta)
+    //     + "\tGamma = " + Math.floor(gamma);
       if (lastPrintEl)
-        outEl.insertBefore(element, lastPrintEl);
+        // outEl.insertBefore(element, lastPrintEl);
       else {
-        outEl.innerHTML = ""; // clear warning message
-        outEl.appendChild(element);
+        // outEl.innerHTML = ""; // clear warning message
+        // outEl.appendChild(element);
       }
-      lastPrintEl = element;
+    //   lastPrintEl = element;
       printTimeout = setTimeout(function () {
         printTimeout = undefined;
       }, 3000);
