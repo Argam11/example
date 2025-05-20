@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 // });
 
+const throttleFn = throttle((alpha) => {
+    air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
+    beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
+  }, 1000);
+ 
+
 function handleOrientation(event) {
   // Access orientation data
   const alpha = Math.round(event.alpha); // Z-axis rotation [0, 360)
@@ -58,10 +64,7 @@ function handleOrientation(event) {
   // p2.innerHTML = `y: ${beta}`;
   // p3.innerHTML = `z: ${gamma}`;
 
-  throttle(() => {
-    air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
-    beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
-  }, 1000);
+  throttleFn(alpha);
 
   // console.log(`Orientation - Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
   // Use these values as needed
@@ -72,7 +75,6 @@ function throttle(mainFunction, delay = 500) {
 
   return (...args) => {
     if (timerFlag === null) {
-      alert(1);
       mainFunction(...args);
       timerFlag = setTimeout(() => {
         timerFlag = null;
