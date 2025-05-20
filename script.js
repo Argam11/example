@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // });
 
 const throttleFn = throttle((alpha) => {
-  alert(alpha);
+    alert(alpha);
     air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
     beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
   }, 1000);
@@ -64,6 +64,9 @@ function handleOrientation(event) {
   // p1.innerHTML = `x: ${alpha}`;
   // p2.innerHTML = `y: ${beta}`;
   // p3.innerHTML = `z: ${gamma}`;
+
+  air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
+  beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
 
   throttleFn(alpha);
 
