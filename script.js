@@ -72,6 +72,7 @@ function throttle(mainFunction, delay = 500) {
 
   return (...args) => {
     if (timerFlag === null) {
+      alert(1);
       mainFunction(...args);
       timerFlag = setTimeout(() => {
         timerFlag = null;
