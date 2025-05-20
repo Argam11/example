@@ -19,7 +19,7 @@ input.onchange = (e) => {
 
 // button.addEventListener("click", async () => {
 
-(async () => {
+document.addEventListener('DOMContentLoaded', async () => {
   if (typeof DeviceOrientationEvent.requestPermission === "function") {
     try {
       // Request permission for device orientation
