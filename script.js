@@ -1,3 +1,5 @@
+const p = document.querySelector("#p");
+
 window.addEventListener("deviceorientation", handleOrientation, true);
 //    window.addEventListener("deviceorientationabsolute", handleOrientation, true);
 
@@ -11,6 +13,13 @@ function handleOrientation(event) {
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
+
+    p.innerHTML = alpha;
+
+    console.log('alpha', alpha);
+    console.log('beta', beta);
+    console.log('gamma', gamma);
+    
 
     // JS math works in radians, so convert
     var betaR = beta / 180 * Math.PI;
