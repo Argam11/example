@@ -29,25 +29,26 @@ function handleOrientation(event) {
     var spin = spinR * 180 / Math.PI;
 
     // throttle output
-    if (printTimeout == undefined) {
-      var outEl = document.getElementById("rotationOutput");
-      var element = document.createElement("div");
+    // if (printTimeout == undefined) {
+    //   var outEl = document.getElementById("rotationOutput");
+    //   var element = document.createElement("div");
     //   element.innerHTML = ""
     //     + "\tSpin = " + Math.floor(spin)
     //     + "\tAlpha = " + Math.floor(alpha)
     //     + "\tBeta = " + Math.floor(beta)
     //     + "\tGamma = " + Math.floor(gamma);
-      if (lastPrintEl)
-        // outEl.insertBefore(element, lastPrintEl);
-      else {
-        // outEl.innerHTML = ""; // clear warning message
-        // outEl.appendChild(element);
-      }
+    //   if (lastPrintEl){
+    //       outEl.insertBefore(element, lastPrintEl);
+
+    //   } else {
+    //     outEl.innerHTML = ""; // clear warning message
+    //     outEl.appendChild(element);
+    //   }
     //   lastPrintEl = element;
-      printTimeout = setTimeout(function () {
-        printTimeout = undefined;
-      }, 3000);
-    }
+    //   printTimeout = setTimeout(function () {
+    //     printTimeout = undefined;
+    //   }, 3000);
+    // }
   }
   catch (ex) {
     if (!errorShown) {
