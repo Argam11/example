@@ -50,6 +50,8 @@ function handleOrientation(event) {
   const beta = event.beta;   // X-axis rotation [-180, 180)
   const gamma = event.gamma; // Y-axis rotation [-90, 90)
 
+  p.innerHTML = alpha;
+
   console.log(`Orientation - Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
   // Use these values as needed
 }
