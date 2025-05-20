@@ -60,6 +60,8 @@ function handleOrientation(event) {
 
   span.innerText = alpha;
 
+  alert(11);
+
   // p1.innerHTML = `x: ${alpha}`;
   // p2.innerHTML = `y: ${beta}`;
   // p3.innerHTML = `z: ${gamma}`;
