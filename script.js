@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 // });
 
 const throttleFn = throttle((alpha) => {
-    alert(alpha);
     air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
     beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
   }, 1000);
@@ -65,7 +64,7 @@ function handleOrientation(event) {
   air.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
   beer.style.transform = `translateX(-40%) rotateZ(${alpha}deg)`;
 
-  throttleFn(alpha);
+  // throttleFn(alpha);
 
   // console.log(`Orientation - Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
   // Use these values as needed
