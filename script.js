@@ -52,9 +52,9 @@ function handleOrientation(event) {
   const beta = event.beta;   // X-axis rotation [-180, 180)
   const gamma = event.gamma; // Y-axis rotation [-90, 90)
 
-  p1.innerHTML = alpha;
-  p2.innerHTML = beta;
-  p3.innerHTML = gamma;
+  p1.innerHTML = `x: ${alpha}`;
+  p2.innerHTML = `y: ${beta}`;
+  p3.innerHTML = `z: ${gamma}`;
 
   console.log(`Orientation - Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
   // Use these values as needed
