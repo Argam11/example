@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error("Device orientation permission denied");
       }
 
-      // Hide the button after permission is handled
-      button.style.display = "none";
     } catch (error) {
       console.error("Error requesting device orientation permission:", error);
     }
@@ -43,7 +41,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.addEventListener("deviceorientation", handleOrientation);
     // window.addEventListener('devicemotion', handleMotion);
     console.log("Device orientation listeners added (non-iOS)");
-    button.style.display = "none";
   }
 });
 // });
