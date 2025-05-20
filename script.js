@@ -13,11 +13,13 @@ input.onchange = (e) => {
   beer.style.transform = `translateX(-40%) rotateZ(${v}deg)`;
 };
 
-const button = document.createElement("button");
-button.innerHTML = "Allow motion sensors";
+// const button = document.createElement("button");
+// button.innerHTML = "Allow motion sensors";
 // document.body.appendChild(button);
 
-button.addEventListener("click", async () => {
+// button.addEventListener("click", async () => {
+
+(async () => {
   if (typeof DeviceOrientationEvent.requestPermission === "function") {
     try {
       // Request permission for device orientation
@@ -44,6 +46,7 @@ button.addEventListener("click", async () => {
     button.style.display = "none";
   }
 });
+// });
 
 function handleOrientation(event) {
   // Access orientation data
